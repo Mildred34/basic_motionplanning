@@ -137,7 +137,7 @@ class GraspingGeneratorEnv():
 
         # Récupération de l'orientation/position du robot
         # if(debug):
-        robot_ob = self.arm.get_observation_quaternion(self.arm.endeffectorId)
+        # robot_ob = self.arm.get_observation_quaternion(self.arm.endeffectorId)
 
         # Smooth simulation rendering to avoid jumping
         if(self.gui):
@@ -179,12 +179,13 @@ class GraspingGeneratorEnv():
                 # Goal position to achieve
                 # Domaine Cartésien
                 # Convert Cartesian space to joint Space HERE
-                start = self.fromcartesiantojointspace([0,0,1,0,0,0,1])
-                goal = self.fromcartesiantojointspace([0,0.5,1.0,0,0,0,1])
+                #start = self.fromcartesiantojointspace([0,0,1,0,0,0,1])
+                start = [0.,0.,0.,0.,0.,0.,0.]
+                #goal = self.fromcartesiantojointspace([0,0.5,1.0,0,0,0,1])
+                goal = [0.,0.463,0.344,-0.287,0.,0.243,0.514]
                 self.robot.set_state(start)
 
-
-                res, self.path = self.pb_ompl_interface.plan(goal)
+                res, self.path = self.pb_ompl_interface.plan(goal) # Add planification in another thread
                 self.setup = True
 
                 if(not res):
@@ -197,6 +198,8 @@ class GraspingGeneratorEnv():
                         p.setJointMotorControl2(self.robot.id, i, p.POSITION_CONTROL, self.path[self.index_path][i],force=5 * 240.)
                 else:
                     self.robot.set_state(self.path[self.index_path])
+                
+                self.index_path = self.index_path + 1
 
         # show axis for end-effector and object
         if(self.gui):

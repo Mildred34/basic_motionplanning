@@ -51,8 +51,10 @@ def pairwise_collision(body1, body2, **kwargs):
 
 def expand_links(body):
     body, links = body if isinstance(body, tuple) else (body, None)
+
     if links is None:
         links = get_all_links(body)
+        
     return body, links
 
 def any_link_pair_collision(body1, links1, body2, links2=None, **kwargs):
@@ -100,11 +102,19 @@ def get_self_link_pairs(body, joints, disabled_collisions=set(), only_moving=Tru
     return check_link_pairs
 
 def get_moving_links(body, joints):
+    """
+    Get all the links that can move
+    """
     moving_links = set()
+
     for joint in joints:
-        link = child_link_from_joint(joint)
+        link = child_link_from_joint(joint) # just link bounded to the joint
+
         if link not in moving_links:
-            moving_links.update(get_link_subtree(body, link))
+            # add all descendants of the link in the set
+            # in an ordered way
+            moving_links.update(get_link_subtree(body, link)) 
+
     return list(moving_links)
 
 def get_moving_pairs(body, moving_joints):
@@ -221,6 +231,8 @@ def get_joint_ancestors(body, joint):
 def get_link_descendants(body, link, test=lambda l: True):
     """
     Get all descendant from a link not only the children
+
+    descendant = upward, towards the end-effector
     """
     descendants = []
 

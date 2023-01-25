@@ -49,8 +49,9 @@ class PbOMPLRobot():
         self.all_joint_idx = list(range(all_joint_num))
 
         self.end_effector_joint_id = arm.endeffectorId
-        joint_idx = [j for j in self.all_joint_idx if (self._is_not_fixed(j) and j <= self.end_effector_joint_id)]
+        joint_idx = [j for j in self.all_joint_idx if (self._is_not_fixed(j) and j in utils.get_joint_ancestors(self.id ,self.end_effector_joint_id))]
 
+        # Joints that we want to plan the motion
         self.num_dim = len(joint_idx)
         self.joint_idx = joint_idx
 
