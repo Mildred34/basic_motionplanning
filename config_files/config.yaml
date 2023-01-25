@@ -1,0 +1,25 @@
+# Simulations parameters
+simulation:
+  GUI: True # Mode non gui a ne pas utiliser pour l'instant ; mode semi-auto en construction
+  GRAVITY: True
+
+# robot parameters
+robot:
+  ArmModel: "D3P2P2L2"
+
+objet:
+  path: 
+    read: "objects_navalgroup" #  "objects_navalgroup" ; "objects_stelantis"
+    write: "objects_navalgroup"
+  Liste: "petri" # Liste d'objets à étudier : [petri ; canister] ! Nom du dossier où se trouve les urdf !
+  UseCase: "petri" # Working on a specific object from the list above
+                  # Or "" for working on every object
+                  # brancard is the first object for stelantis
+                  # Tuyau1(0,8) is the first object for naval_group
+
+# debug parameters
+debug:
+  JOINTS: True
+  POS: False # Check kinematics solver
+  LEVEL: 0 # 0 is no debug ; 1 is with full debug
+  LOG_PATH : "/logs/logs_saved/" # path where the logs will be saved

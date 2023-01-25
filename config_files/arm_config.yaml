@@ -1,0 +1,918 @@
+# Config du bras et des doigts
+## 3 Doigts
+# 2 Phalanges
+D3P2P1L1 :
+  path :  "/cea_robots/D3P2P1L1.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+
+D3P2P1L2 :
+  path :  "/cea_robots/D3P2P1L2.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+
+
+D3P2P2L1 :
+  path :  "/cea_robots/D3P2P2L1.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+
+
+
+D3P2P2L2 :
+  path :  "/cea_robots/D3P2P2L2.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+
+# 3 Phalanges
+
+D3P3P1L1 :
+  path :  "/cea_robots/D3P3P1L1.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_I,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_I,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_I,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+
+D3P3P1L2 :
+  path :  "/cea_robots/D3P3P1L2.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_I,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_I,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_I,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+
+D3P3P2L1 :
+  path :  "/cea_robots/D3P3P2L1.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_I,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_I,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_I,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+
+D3P3P2L2 :
+  path :  "/cea_robots/D3P3P2L2.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_I,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_I,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_I,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+## 4 doigts
+# 2 phalanges
+
+D4P2P1L1 :
+  path :  "/cea_robots/D4P2P1L1.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+  
+    finger_4 : 
+      links : "finger4_B,finger4_P,finger4_D"
+      joints : 
+        names : "finger4_BP_joint,finger4_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+
+D4P2P1L2 :
+  path :  "/cea_robots/D4P2P1L2.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+  
+    finger_4 : 
+      links : "finger4_B,finger4_P,finger4_D"
+      joints : 
+        names : "finger4_BP_joint,finger4_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+
+
+
+D4P2P2L1 :
+  path :  "/cea_robots/D4P2P2L1.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+  
+    finger_4 : 
+      links : "finger4_B,finger4_P,finger4_D"
+      joints : 
+        names : "finger4_BP_joint,finger4_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+
+
+D4P2P2L2 :
+  path :  "/cea_robots/D4P2P2L2.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+        open  : "zero,lower,lower"
+        close : "zero,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+  
+    finger_4 : 
+      links : "finger4_B,finger4_P,finger4_D"
+      joints : 
+        names : "finger4_BP_joint,finger4_PD_joint"
+        open  : "lower,lower"
+        close : "upper,upper"
+
+# 3 phalanges
+
+D4P3P1L1 :
+  path :  "/cea_robots/D4P3P1L1.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_I,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_I,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_I,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+    finger_4 : 
+      links : "finger4_B,finger4_P,finger4_I,finger4_D"
+      joints : 
+        names : "finger4_BP_joint,finger4_PI_joint,finger4_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+
+D4P3P1L2 :
+  path :  "/cea_robots/D4P3P1L2.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_I,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_I,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_I,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+    finger_4 : 
+      links : "finger4_B,finger4_P,finger4_I,finger4_D"
+      joints : 
+        names : "finger4_BP_joint,finger4_PI_joint,finger4_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+
+D4P3P2L1 :
+  path :  "/cea_robots/D4P3P2L1.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_I,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_I,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_I,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+    finger_4 : 
+      links : "finger4_B,finger4_P,finger4_I,finger4_D"
+      joints : 
+        names : "finger4_BP_joint,finger4_PI_joint,finger4_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+
+D4P3P2L2 :
+  path :  "/cea_robots/D4P3P2L2.urdf"
+  endeffector : "hand_grasp_center"
+
+  palm:
+    link : "hand_case"
+
+  fingers :
+
+    finger_1 :
+      links : "finger1_B,finger1_P,finger1_I,finger1_D"
+      joints : 
+        names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_2 : 
+      links : "finger2_B,finger2_P,finger2_I,finger2_D"
+      joints : 
+        names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+        open  : "zero,lower,lower,lower"
+        close : "zero,upper,upper,upper"
+
+    finger_3 : 
+      links : "finger3_B,finger3_P,finger3_I,finger3_D"
+      joints : 
+        names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+    finger_4 : 
+      links : "finger4_B,finger4_P,finger4_I,finger4_D"
+      joints : 
+        names : "finger4_BP_joint,finger4_PI_joint,finger4_ID_joint"
+        open  : "lower,lower,lower"
+        close : "upper,upper,upper"
+
+## 5 doigts
+# 2 phalanges
+
+# D5P2P1L1 :
+#   path :  "/cea_robots/D5P2P1L1.urdf"
+#   endeffector : "hand_grasp_center"
+
+#   palm:
+#     link : "hand_case"
+
+#   fingers :
+
+#     finger_1 :
+#       links : "finger1_B,finger1_P,finger1_D"
+#       joints : 
+#         names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+#         open  : "zero,lower,lower"
+#         close : "zero,upper,upper"
+
+#     finger_2 : 
+#       links : "finger2_B,finger2_P,finger2_D"
+#       joints : 
+#         names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+#         open  : "zero,lower,lower"
+#         close : "zero,upper,upper"
+
+#     finger_3 : 
+#       links : "finger3_B,finger3_P,finger3_D"
+#       joints : 
+#         names : "finger3_BP_joint,finger3_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+  
+#     finger_4 : 
+#       links : "finger4_B,finger4_P,finger4_D"
+#       joints : 
+#         names : "finger4_BP_joint,finger4_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+
+#     finger_5 : 
+#       links : "finger5_B,finger5_P,finger5_D"
+#       joints : 
+#         names : "finger5_BP_joint,finger5_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+
+# D5P2P1L2 :
+#   path :  "/cea_robots/D5P2P1L2.urdf"
+#   endeffector : "hand_grasp_center"
+
+#   palm:
+#     link : "hand_case"
+
+#   fingers :
+
+#     finger_1 :
+#       links : "finger1_B,finger1_P,finger1_D"
+#       joints : 
+#         names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+#         open  : "zero,lower,lower"
+#         close : "zero,upper,upper"
+
+#     finger_2 : 
+#       links : "finger2_B,finger2_P,finger2_D"
+#       joints : 
+#         names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+#         open  : "zero,lower,lower"
+#         close : "zero,upper,upper"
+
+#     finger_3 : 
+#       links : "finger3_B,finger3_P,finger3_D"
+#       joints : 
+#         names : "finger3_BP_joint,finger3_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+  
+#     finger_4 : 
+#       links : "finger4_B,finger4_P,finger4_D"
+#       joints : 
+#         names : "finger4_BP_joint,finger4_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+
+#     finger_5 : 
+#       links : "finger5_B,finger5_P,finger5_D"
+#       joints : 
+#         names : "finger5_BP_joint,finger5_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+
+
+# D5P2P2L1 :
+#   path :  "/cea_robots/D5P2P2L1.urdf"
+#   endeffector : "hand_grasp_center"
+
+#   palm:
+#     link : "hand_case"
+
+#   fingers :
+
+#     finger_1 :
+#       links : "finger1_B,finger1_P,finger1_D"
+#       joints : 
+#         names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+#         open  : "zero,lower,lower"
+#         close : "zero,upper,upper"
+
+#     finger_2 : 
+#       links : "finger2_B,finger2_P,finger2_D"
+#       joints : 
+#         names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+#         open  : "zero,lower,lower"
+#         close : "zero,upper,upper"
+
+#     finger_3 : 
+#       links : "finger3_B,finger3_P,finger3_D"
+#       joints : 
+#         names : "finger3_BP_joint,finger3_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+  
+#     finger_4 : 
+#       links : "finger4_B,finger4_P,finger4_D"
+#       joints : 
+#         names : "finger4_BP_joint,finger4_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+
+#     finger_5 : 
+#       links : "finger5_B,finger5_P,finger5_D"
+#       joints : 
+#         names : "finger5_BP_joint,finger5_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+
+
+# D5P2P2L2 :
+#   path :  "/cea_robots/D5P2P2L2.urdf"
+#   endeffector : "hand_grasp_center"
+
+#   palm:
+#     link : "hand_case"
+
+#   fingers :
+
+#     finger_1 :
+#       links : "finger1_B,finger1_P,finger1_D"
+#       joints : 
+#         names : "base_finger_1,finger1_BP_joint,finger1_PD_joint"
+#         open  : "zero,lower,lower"
+#         close : "zero,upper,upper"
+
+#     finger_2 : 
+#       links : "finger2_B,finger2_P,finger2_D"
+#       joints : 
+#         names : "base_finger_2,finger2_BP_joint,finger2_PD_joint"
+#         open  : "zero,lower,lower"
+#         close : "zero,upper,upper"
+
+#     finger_3 : 
+#       links : "finger3_B,finger3_P,finger3_D"
+#       joints : 
+#         names : "finger3_BP_joint,finger3_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+  
+#     finger_4 : 
+#       links : "finger4_B,finger4_P,finger4_D"
+#       joints : 
+#         names : "finger4_BP_joint,finger4_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+
+#     finger_5 : 
+#       links : "finger5_B,finger5_P,finger5_D"
+#       joints : 
+#         names : "finger5_BP_joint,finger5_PD_joint"
+#         open  : "lower,lower"
+#         close : "upper,upper"
+
+# # 3 phalanges
+
+# D5P3P1L1 :
+#   path :  "/cea_robots/D5P3P1L1.urdf"
+#   endeffector : "hand_grasp_center"
+
+#   palm:
+#     link : "hand_case"
+
+#   fingers :
+
+#     finger_1 :
+#       links : "finger1_B,finger1_P,finger1_I,finger1_D"
+#       joints : 
+#         names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+#         open  : "zero,lower,lower,lower"
+#         close : "zero,upper,upper,upper"
+
+#     finger_2 : 
+#       links : "finger2_B,finger2_P,finger2_I,finger2_D"
+#       joints : 
+#         names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+#         open  : "zero,lower,lower,lower"
+#         close : "zero,upper,upper,upper"
+
+#     finger_3 : 
+#       links : "finger3_B,finger3_P,finger3_I,finger3_D"
+#       joints : 
+#         names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+#     finger_4 : 
+#       links : "finger4_B,finger4_P,finger4_I,finger4_D"
+#       joints : 
+#         names : "finger4_BP_joint,finger4_PI_joint,finger4_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+#     finger_5 : 
+#       links : "finger5_B,finger5_P,finger5_I,finger5_D"
+#       joints : 
+#         names : "finger5_BP_joint,finger5_PI_joint,finger5_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+# D5P3P1L2 :
+#   path :  "/cea_robots/D5P3P1L2.urdf"
+#   endeffector : "hand_grasp_center"
+
+#   palm:
+#     link : "hand_case"
+
+#   fingers :
+
+#     finger_1 :
+#       links : "finger1_B,finger1_P,finger1_I,finger1_D"
+#       joints : 
+#         names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+#         open  : "zero,lower,lower,lower"
+#         close : "zero,upper,upper,upper"
+
+#     finger_2 : 
+#       links : "finger2_B,finger2_P,finger2_I,finger2_D"
+#       joints : 
+#         names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+#         open  : "zero,lower,lower,lower"
+#         close : "zero,upper,upper,upper"
+
+#     finger_3 : 
+#       links : "finger3_B,finger3_P,finger3_I,finger3_D"
+#       joints : 
+#         names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+#     finger_4 : 
+#       links : "finger4_B,finger4_P,finger4_I,finger4_D"
+#       joints : 
+#         names : "finger4_BP_joint,finger4_PI_joint,finger4_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+#     finger_5 : 
+#       links : "finger5_B,finger5_P,finger5_I,finger5_D"
+#       joints : 
+#         names : "finger5_BP_joint,finger5_PI_joint,finger5_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+
+# D5P3P2L1 :
+#   path :  "/cea_robots/D5P3P2L1.urdf"
+#   endeffector : "hand_grasp_center"
+
+#   palm:
+#     link : "hand_case"
+
+#   fingers :
+
+#     finger_1 :
+#       links : "finger1_B,finger1_P,finger1_I,finger1_D"
+#       joints : 
+#         names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+#         open  : "zero,lower,lower,lower"
+#         close : "zero,upper,upper,upper"
+
+#     finger_2 : 
+#       links : "finger2_B,finger2_P,finger2_I,finger2_D"
+#       joints : 
+#         names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+#         open  : "zero,lower,lower,lower"
+#         close : "zero,upper,upper,upper"
+
+#     finger_3 : 
+#       links : "finger3_B,finger3_P,finger3_I,finger3_D"
+#       joints : 
+#         names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+#     finger_4 : 
+#       links : "finger4_B,finger4_P,finger4_I,finger4_D"
+#       joints : 
+#         names : "finger4_BP_joint,finger4_PI_joint,finger4_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+#     finger_5 : 
+#       links : "finger5_B,finger5_P,finger5_I,finger5_D"
+#       joints : 
+#         names : "finger5_BP_joint,finger5_PI_joint,finger5_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+
+# D5P3P2L2 :
+#   path :  "/cea_robots/D5P3P2L2.urdf"
+#   endeffector : "hand_grasp_center"
+
+#   palm:
+#     link : "hand_case"
+
+#   fingers :
+
+#     finger_1 :
+#       links : "finger1_B,finger1_P,finger1_I,finger1_D"
+#       joints : 
+#         names : "base_finger_1,finger1_BP_joint,finger1_PI_joint,finger1_ID_joint"
+#         open  : "zero,lower,lower,lower"
+#         close : "zero,upper,upper,upper"
+
+#     finger_2 : 
+#       links : "finger2_B,finger2_P,finger2_I,finger2_D"
+#       joints : 
+#         names : "base_finger_2,finger2_BP_joint,finger2_PI_joint,finger2_ID_joint"
+#         open  : "zero,lower,lower,lower"
+#         close : "zero,upper,upper,upper"
+
+#     finger_3 : 
+#       links : "finger3_B,finger3_P,finger3_I,finger3_D"
+#       joints : 
+#         names : "finger3_BP_joint,finger3_PI_joint,finger3_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+#     finger_4 : 
+#       links : "finger4_B,finger4_P,finger4_I,finger4_D"
+#       joints : 
+#         names : "finger4_BP_joint,finger4_PI_joint,finger4_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"
+
+#     finger_5 : 
+#       links : "finger5_B,finger5_P,finger5_I,finger5_D"
+#       joints : 
+#         names : "finger5_BP_joint,finger5_PI_joint,finger5_ID_joint"
+#         open  : "lower,lower,lower"
+#         close : "upper,upper,upper"

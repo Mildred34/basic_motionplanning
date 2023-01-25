@@ -1,0 +1,760 @@
+<?xml version="1.0" ?>
+<robot name="lbr_iiwa_with_wsg50">
+
+  <!-- Import Rviz colors -->
+  <material name="Grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  <material name="Orange">
+    <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+  </material>
+  <material name="Blue">
+  <color rgba="0.5 0.7 1.0 1.0"/>
+</material>
+
+  <!-- link 0 -->
+  <link name="lbr_iiwa_link_0">
+  <selfCollide>false</selfCollide>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="-0.1 0 0.07" rpy="0 0 0"/>
+      <inertia ixx="0.05" ixy="0" ixz="0" iyy="0.06" iyz="0" izz="0.03"/>
+    </inertial>
+    <collision name="lbr_iiwa_link_0_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_0.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="lbr_iiwa_link_0_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_0.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+  </link>
+
+  <!-- joint between link_0 and link_1 -->
+  <joint name="J0" type="revolute">
+    <parent link="lbr_iiwa_link_0"/>
+    <child link="lbr_iiwa_link_1"/>
+    <origin xyz="0 0 0.1575" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.96706" upper="2.96706" effort="300.0" velocity="10.0"/>
+  </joint>
+
+
+  <!-- link 1 -->
+  <link name="lbr_iiwa_link_1">
+  <selfCollide>false</selfCollide>
+    <inertial>
+      <mass value="4"/>
+      <origin xyz="0   -0.03  0.12" rpy="0 0 0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.09" iyz="0" izz="0.02"/>
+    </inertial>
+    <collision name="lbr_iiwa_link_1_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_1.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="lbr_iiwa_link_1_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_1.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="Blue"/>
+    </visual>
+  </link>
+
+  <!-- joint between link_1 and link_2 -->
+  <joint name="J1" type="revolute">
+    <parent link="lbr_iiwa_link_1"/>
+    <child link="lbr_iiwa_link_2"/>
+    <origin xyz="0 0 0.2025" rpy="1.5708 0 -3.14159"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.0944" upper="2.0944" effort="300.0" velocity="10.0"/>
+  </joint>
+
+  <!-- link 2 -->
+  <link name="lbr_iiwa_link_2">
+  <selfCollide>false</selfCollide>
+    <inertial>
+      <mass value="4"/>
+      <origin xyz="0.00029 0.059   0.042" rpy="0 0 0"/>
+      <inertia ixx="0.05" ixy="0" ixz="0" iyy="0.018" iyz="0" izz="0.044"/>
+    </inertial>
+    <collision name="lbr_iiwa_link_2_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_2.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="lbr_iiwa_link_2_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_2.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="Blue"/>
+    </visual>
+  </link>
+
+  <!-- joint between link_2 and link_3 -->
+  <joint name="J2" type="revolute">
+    <parent link="lbr_iiwa_link_2"/>
+    <child link="lbr_iiwa_link_3"/>
+    <origin xyz="0     0.2045 0" rpy="1.5708 0 -3.14159"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.96706" upper="2.96706" effort="300.0" velocity="10.0"/>
+  </joint>
+
+  <link name="lbr_iiwa_link_3">
+  <selfCollide>false</selfCollide>
+    <inertial>
+      <mass value="3"/>
+      <origin xyz="0   0.03 0.13" rpy="0 0 0"/>
+      <inertia ixx="0.08" ixy="0" ixz="0" iyy="0.075" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision name="lbr_iiwa_link_3_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_3.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="lbr_iiwa_link_3_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_3.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="Orange"/>
+    </visual>
+  </link>
+
+  <joint name="J3" type="revolute">
+    <parent link="lbr_iiwa_link_3"/>
+    <child link="lbr_iiwa_link_4"/>
+    <origin xyz="0     0     0.2155" rpy="1.5708 0     0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.0944" upper="2.0944" effort="300.0" velocity="10.0"/>
+  </joint>
+
+  <link name="lbr_iiwa_link_4">
+  <selfCollide>false</selfCollide>
+    <inertial>
+      <mass value="2.7"/>
+      <origin xyz="0    0.067 0.034" rpy="0 0 0"/>
+      <inertia ixx="0.03" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.029"/>
+    </inertial>
+    <collision name="lbr_iiwa_link_4_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_4.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="lbr_iiwa_link_4_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_4.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="Blue"/>
+    </visual>
+  </link>
+
+
+  <joint name="J4" type="revolute">
+    <parent link="lbr_iiwa_link_4"/>
+    <child link="lbr_iiwa_link_5"/>
+    <origin xyz="0     0.1845 0" rpy="1.5708  0      3.14159"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.96706" upper="2.96706" effort="300.0" velocity="10.0"/>
+  </joint>
+
+
+  <link name="lbr_iiwa_link_5">
+  <selfCollide>false</selfCollide>
+    <inertial>
+      <mass value="1.7"/>
+      <origin xyz="0.0001 0.021  0.076" rpy="0 0 0"/>
+      <inertia ixx="0.02" ixy="0" ixz="0" iyy="0.018" iyz="0" izz="0.005"/>
+    </inertial>
+    <collision name="lbr_iiwa_link_5_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_5.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="lbr_iiwa_link_5_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_5.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="Blue"/>
+    </visual>
+  </link>
+
+  <joint name="J5" type="revolute">
+    <parent link="lbr_iiwa_link_5"/>
+    <child link="lbr_iiwa_link_6"/>
+    <origin xyz="0     0     0.2155" rpy="1.5708 0     0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.0944" upper="2.0944" effort="300.0" velocity="10.0"/>
+  </joint>
+
+  <link name="lbr_iiwa_link_6">
+  <selfCollide>false</selfCollide>
+    <inertial>
+      <mass value="1.8"/>
+      <origin xyz="0      0.00059 0.0004" rpy="0 0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.0036" iyz="0" izz="0.0047"/>
+    </inertial>
+    <collision name="lbr_iiwa_link_6_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_6.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="lbr_iiwa_link_6_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_6.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="Orange"/>
+    </visual>
+  </link>
+
+  <joint name="J6" type="revolute">
+    <parent link="lbr_iiwa_link_6"/>
+    <child link="lbr_iiwa_link_7"/>
+    <origin xyz="0    0.081 0" rpy="1.5708   0      -3.14159"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.05433" upper="3.05433" effort="300.0" velocity="10.0"/>
+  </joint>
+
+  <link name="lbr_iiwa_link_7">
+  <selfCollide>false</selfCollide>
+    <inertial>
+      <mass value="0.3"/>
+      <origin xyz="0   0   0.02" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <collision name="lbr_iiwa_link_7_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_7.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="lbr_iiwa_link_7_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes//kuka//link_7.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+  </link>
+
+<!-- Palm -->
+
+  <joint name="base_joint" type="fixed">
+    <parent link="lbr_iiwa_link_7"/>
+    <child link="hand_base_link"/>
+    <origin xyz="0 0 0.132936" rpy="0 0 0"/> <!-- 0.044 -->
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="hand_base_link"> </link>
+
+  <!-- pas conforme au setup reel -->
+  <!-- xyz="-0.11876 0 0.11935"
+       rpy="0 0.93236 0"/>-->
+  <!-- setup reel-->
+  <joint name="hand_interface_to_base" type="fixed">
+    <origin rpy="0 0.0 0" xyz="0 0 0.0"/> <!-- 0.132936 -->
+    <parent link="hand_base_link"/>
+    <child link="hand_base_hand"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+
+  <link name="hand_base_hand">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00 0.0 -0.04835"/>
+      <mass value="2.9623"/>
+      <inertia ixx="0.0098688" ixy="0" ixz="-0.00072557" iyy="0.011075" iyz="0" izz="0.015946"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/paume/base_hand_paume1.STL" />
+        <!--  filename="package://cea_robots/meshes/hand/visual/base_link.STL" />-->
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/paume/base_hand_paume1.STL"/>
+        <!-- filename="package://cea_robots/meshes/hand/collision/base_link.STL" />-->
+      </geometry>
+    </collision>
+  </link>
+
+<!-- Finger 1 -->
+<!-- Adduction / abduction Joint -->
+<!-- Just a reminder joint frame are localized upon the parent joint frame -->
+<!-- Then the inertia frame, link frame is localized upon this new joint frame -->
+<!-- Same goes for visual and collision frame -->
+<!-- rpy = pitch yaw roll ; 
+remember that at each rotation we're using the old axes to do it not the new ones -->
+  <joint name="base_finger_1" type="revolute">
+    <origin rpy="0 -1.5708 -3.1416 " xyz="0.054 0.054 0.09885097"/>
+    <parent link="hand_base_hand"/>
+    <child link="finger1_B"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="8"/>
+    <limit effort="100" lower="-1.5708" upper="0" velocity="3"/>
+  </joint>
+
+  <link name="finger1_B">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0465 -0.04775 -0.0"/>
+      <mass value="0.519"/>
+      <inertia ixx="0.0007" ixy="-0.0002" ixz="0.0" iyy="0.0006" iyz="0.0" izz="0.0011"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/base_finger/finger.STL" />
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/base_finger/finger.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="finger1_BP_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 -0.03255 0"/>
+    <parent link="finger1_B"/>
+    <child link="finger1_P"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.3"/>
+    <limit effort="5" lower="-1.3" upper="0.31416" velocity="5"/>  <!-- -0.43633 -->
+  </joint>
+
+  <link name="finger1_P">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.044 -0.01009 0.0"/>
+      <mass value="0.300"/>
+      <inertia ixx="0.000092" ixy="-0.000061" ixz="0.0" iyy="0.00031" iyz="0.0" izz="0.00031"/>
+      <!--<mass value="0.09833" />
+          <inertia
+              ixx="0.00003"
+              ixy="-0.00002"
+              ixz="0.0"
+              iyy="0.00010"
+              iyz="0.0"
+              izz="0.00010" />-->
+    </inertial>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/proximal/proximal_0.11.STL" />
+      </geometry>
+      <material name="Orange"/>
+    </visual>
+
+    <collision>
+      <!--<origin rpy="0 0 0" xyz="0.04 -0.01 0"/>
+      <geometry>
+        <box size="0.090 0.030 0.033"/>
+      </geometry>-->
+
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/proximal/proximal_0.11.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="finger1_PD_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0.1 0 0.0"/>
+    <parent link="finger1_P"/>
+    <child link="finger1_D"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.3"/>
+    <limit effort="5" lower="-0.5" upper="1.0472" velocity="5"/>
+  </joint>
+
+  <link name="finger1_D">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.04016 -0.00152 0.0"/>
+      <mass value="0.150"/>
+      <inertia ixx="0.000025" ixy="0.000013" ixz="0.0" iyy="0.000102" iyz="0.0" izz="0.000108"/>
+      <!--<mass value="0.200" />
+          <inertia
+              ixx="0.000028"
+              ixy="0.000014"
+              ixz="0.0"
+              iyy="0.000113"
+              iyz="0.0"
+              izz="0.000120" />-->
+      <!--<mass value="0.02828" />
+          <inertia
+              ixx="0.000004"
+              ixy="0.000002"
+              ixz="0.0"
+              iyy="0.000016"
+              iyz="0.0"
+              izz="0.000017" />-->
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/distal/distal_2P/distal_0.866.STL" />
+      </geometry>
+      <material name="Orange"/>
+    </visual>
+    <collision>
+      <!--<origin rpy="0 1.57 0" xyz="0.030 -0.002 0"/>
+      <geometry>
+        <cylinder length="0.066" radius="0.011"/>
+      </geometry>
+      -->
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/distal/distal_2P/distal_0.866.STL" />
+      </geometry>
+    </collision>
+
+    <!--<collision>
+      <origin rpy="0 0 0" xyz="0.063 -0.002 0"/>
+      <geometry>
+        <sphere radius="0.011"/>
+      </geometry>
+    </collision>-->
+  </link>
+
+<!-- FINGER 2 -->
+<!-- Adduction / Abduction joint -->
+  <joint name="base_finger_2" type="revolute">
+    <origin rpy="3.1416 -1.5708 3.1416" xyz="0.054 -0.054 0.09885097"/>
+    <parent link="hand_base_hand"/>
+    <child link="finger2_B"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="8"/>
+    <limit effort="100" lower="0" upper="1.5708" velocity="3"/>
+    <mimic joint="hand_abduction1" multiplier="-1" offset="0"/>
+  </joint>
+
+  <link name="finger2_B">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0465 -0.04775 -0.0"/>
+      <mass value="0.519"/>
+      <inertia ixx="0.0007" ixy="-0.0002" ixz="0.0" iyy="0.0006" iyz="0.0" izz="0.0011"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/base_finger/finger.STL" />
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/base_finger/finger.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="finger2_BP_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 -0.03255 0"/>
+    <parent link="finger2_B"/>
+    <child link="finger2_P"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.3"/>
+    <limit effort="5" lower="-1.3" upper="0.31416" velocity="5"/>
+  </joint>
+
+  <link name="finger2_P">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.044 -0.01009 0.0"/>
+      <mass value="0.300"/>
+      <inertia ixx="0.000092" ixy="-0.000061" ixz="0.0" iyy="0.00031" iyz="0.0" izz="0.00031"/>
+      <!--<mass value="0.09833" />
+          <inertia
+              ixx="0.00003"
+              ixy="-0.00002"
+              ixz="0.0"
+              iyy="0.00010"
+              iyz="0.0"
+              izz="0.00010" />-->
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/proximal/proximal_0.11.STL" />
+      </geometry>
+      <material name="Orange"/>
+    </visual>
+    <collision>
+      <!--<origin rpy="0 0 0" xyz="0.04 -0.01 0"/>
+      <geometry>
+        <box size="0.090 0.030 0.033"/>
+      </geometry>-->
+
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/proximal/proximal_0.11.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="finger2_PD_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0.1 0 0.0"/>
+    <parent link="finger2_P"/>
+    <child link="finger2_D"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.3"/>
+    <limit effort="5" lower="-0.5" upper="1.0472" velocity="5"/>
+  </joint>
+
+  <link name="finger2_D">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.04016 -0.00152 0.0"/>
+      <mass value="0.150"/>
+      <inertia ixx="0.000025" ixy="0.000013" ixz="0.0" iyy="0.000102" iyz="0.0" izz="0.000108"/>
+      <!--<mass value="0.200" />
+          <inertia
+              ixx="0.000028"
+              ixy="0.000014"
+              ixz="0.0"
+              iyy="0.000113"
+              iyz="0.0"
+              izz="0.000120" />-->
+      <!--<mass value="0.02828" />
+          <inertia
+              ixx="0.000004"
+              ixy="0.000002"
+              ixz="0.0"
+              iyy="0.000016"
+              iyz="0.0"
+              izz="0.000017" />-->
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/distal/distal_2P/distal_0.866.STL" />
+      </geometry>
+      <material name="Orange"/>
+    </visual>
+    <collision>
+    <!--
+      <origin rpy="0 1.57 0" xyz="0.030 -0.002 0"/>
+      <geometry>
+        <cylinder length="0.066" radius="0.011"/>
+      </geometry>-->
+
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/distal/distal_2P/distal_0.866.STL" />
+      </geometry>
+    </collision>
+    <!--
+    <collision>
+      <origin rpy="0 0 0" xyz="0.063 -0.002 0"/>
+      <geometry>
+        <sphere radius="0.011"/>
+      </geometry>
+    </collision>-->
+  </link>
+
+
+  <!-- FINGER 3 -->
+
+  <joint name="base_finger_3" type="fixed">
+    <!-- position pas exactement bonne par rapport a la main reelle a 2-3 mm pres -->
+    <origin rpy="-1.5708 -1.5708 0" xyz="-0.04398 0 0.09885097"/>
+    <parent link="hand_base_hand"/>
+    <child link="finger3_B"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+
+  <link name="finger3_B">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0465 -0.04775 -0.0"/>
+      <mass value="0.519"/>
+      <inertia ixx="0.0007" ixy="-0.0002" ixz="0.0" iyy="0.0006" iyz="0.0" izz="0.0011"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/base_finger/finger.STL" />
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/base_finger/finger.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint name="finger3_BP_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 -0.03255 0"/>
+    <parent link="finger3_B"/>
+    <child link="finger3_P"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.3"/>
+    <limit effort="5" lower="-1.3" upper="0.31416" velocity="5"/>
+  </joint>
+
+  <link name="finger3_P">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.044 -0.01009 0.0"/>
+      <mass value="0.300"/>
+      <inertia ixx="0.000092" ixy="-0.000061" ixz="0.0" iyy="0.00031" iyz="0.0" izz="0.00031"/>
+      <!--<mass
+                        value="0.09833" />
+                    <inertia
+                        ixx="0.00003"
+                        ixy="-0.00002"
+                        ixz="0.0"
+                        iyy="0.00010"
+                        iyz="0.0"
+                        izz="0.00010" />-->
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/proximal/proximal_0.11.STL" />
+      </geometry>
+      <material name="Orange"/>
+    </visual>
+
+    <collision>
+
+      <!--<origin rpy="0 0 0" xyz="0.04 -0.01 0"/>
+      <geometry>
+        <box size="0.090 0.030 0.033"/>
+      </geometry>-->
+
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/proximal/proximal_0.11.STL" />
+      </geometry>
+
+    </collision>
+  </link>
+
+  <joint name="finger3_PD_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0.1 0 0.0"/>
+    <parent link="finger3_P"/>
+    <child link="finger3_D"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.3"/>
+    <limit effort="5" lower="-0.5" upper="1.0472" velocity="5"/>
+  </joint>
+
+  <link name="finger3_D">
+    <selfCollide>false</selfCollide>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.04016 -0.00152 0.0"/>
+      <mass value="0.150"/>
+      <inertia ixx="0.000025" ixy="0.000013" ixz="0.0" iyy="0.000102" iyz="0.0" izz="0.000108"/>
+      <!--<mass value="0.200" />
+          <inertia
+              ixx="0.000028"
+              ixy="0.000014"
+              ixz="0.0"
+              iyy="0.000113"
+              iyz="0.0"
+              izz="0.000120" /> -->
+      <!--<mass value="0.02828" />
+          <inertia
+            ixx="0.000004"
+            ixy="0.000002"
+            ixz="0.0"
+            iyy="0.000016"
+            iyz="0.0"
+            izz="0.000017" /> -->
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/distal/distal_2P/distal_0.866.STL" />
+      </geometry>
+      <material name="Orange"/>
+    </visual>
+    <collision>
+      <!-- 
+      <origin rpy="0 1.57 0" xyz="0.030 -0.002 0"/> 
+      <geometry>
+      <cylinder length="0.066" radius="0.011"/> 
+      </geometry>
+      -->
+
+      <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
+      <geometry>
+        <mesh filename="package://collision/distal/distal_2P/distal_0.866.STL" />
+      </geometry>
+    </collision>
+
+    <!--<collision>
+      <origin rpy="0 0 0" xyz="0.063 -0.002 0"/>
+      <geometry>
+        <sphere radius="0.011"/>
+      </geometry>
+    </collision>-->
+  </link>
+
+  <joint name="hand_base_to_case" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.013"/>
+    <parent link="hand_base_hand"/>
+    <child link="hand_case"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+
+  <link name="hand_case">
+    <selfCollide>false</selfCollide>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://visual/case/case_3d.STL"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://collision/case/case_3d.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="hand_case_to_grasp_center" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.15"/>
+    <parent link="hand_base_hand"/>
+    <child link="hand_grasp_center"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+
+  <link name="hand_grasp_center"> </link>
+
+</robot>
